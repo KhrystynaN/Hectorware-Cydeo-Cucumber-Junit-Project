@@ -1,4 +1,5 @@
 package com.hectorware.pages;
 
-public class FilesPage {
+public class FilesPage extends BasePage{
+
 }

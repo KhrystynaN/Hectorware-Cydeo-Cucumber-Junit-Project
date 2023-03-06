@@ -1,5 +1,6 @@
 package com.hectorware.step_definitions;
 
+import com.hectorware.pages.FilesPage;
 import com.hectorware.pages.LoginPage;
 import com.hectorware.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -8,7 +9,6 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US01_US02_Login_Step_Definition {
-
     LoginPage loginPage = new LoginPage();
 
     @Given("user is on the login page")
