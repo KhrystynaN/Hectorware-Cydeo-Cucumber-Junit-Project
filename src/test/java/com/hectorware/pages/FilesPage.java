@@ -15,13 +15,16 @@ public class FilesPage extends BasePage{
    public WebElement usedKB_Button;
 
 
-    @FindBy(xpath = "//a[@aria-label='Files']//span[.='Files']")
-    public WebElement FilesModule;
+    @FindBy(xpath = "(//a[@aria-label='Files'])[1]")
+    public WebElement filesModule;
 
 
-    public void goToFiles(){
-        FilesModule.click();
+    @FindBy(xpath = "//label[@for='showRichWorkspacesToggle']")
+    public WebElement settingCheckbox1_richWorkspaces;
 
-    }
+    @FindBy(xpath = "//label[@for='recommendationsEnabledToggle']")
+    public WebElement settingCheckbox2_recommendations;
 
+    @FindBy(xpath = "//label[@for='showhiddenfilesToggle']")
+    public WebElement settingCheckbox3_hiddenFiles;
 }
