@@ -12,6 +12,9 @@ public abstract class BasePage {
 
     public void navigateTo(String module){
         WebElement linkToPage = Driver.getDriver().findElement(By.xpath("(//a[@aria-label='" + module + "'])[1]"));
+
+        linkToPage.click();
+
     }
 
 
