@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
             features = "src/test/resources/features",
             glue = "com/hectorware/step_definitions",
             dryRun = false,
-            tags = "@mainModules",
+            tags = "@favorite",
             publish = true // generating a report with public link
 
     )
