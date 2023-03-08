@@ -7,7 +7,7 @@ Feature: As a user, I should be able to access to Files module - Favorites butto
     Given user is on the home page
     Given user sees  the last added file or folder "Selenium" without favorite icon
 
-  @favorite
+  @B28G18-82
   Scenario: verify user can add files to favorites
     When user clicks on "Files" module
     And user clicks action-icon from any file on the page
