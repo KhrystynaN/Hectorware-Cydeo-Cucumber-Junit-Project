@@ -11,10 +11,10 @@ public class US14_AccessPhotoModule_Step_Def {
 
     PhotosPage photosPage = new PhotosPage();
 
-    @When("user clicks on {string} module")
-    public void user_clicks_on_module(String module) {
-       photosPage.navigateTo(module);
-    }
+  //  @When("user clicks on {string} module")
+   // public void user_clicks_on_module(String module) {
+    //   photosPage.navigateTo(module);
+   // }
     @Then("verify there are following sub-modules")
     public void verify_there_are_following_sub_modules(List<String> expectedSubModules) {
 
