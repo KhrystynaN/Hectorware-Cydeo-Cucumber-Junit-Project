@@ -1,6 +1,5 @@
 package com.hectorware.pages;
 
-
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.hectorware.utilities.Driver;
@@ -11,6 +10,24 @@ import java.util.List;
 public class FilesPage extends BasePage{
 
 
+    // USER STORY 08
+    @FindBy(xpath = "//span[@class=\"icon icon-add\"]")
+    public WebElement uploadBar;
+
+    @FindBy(xpath = "//*[contains(text(),'New folder')]")
+    public WebElement selectNewFolder;
+
+    @FindBy(xpath = "//input[@value=\"New folder\"]")
+    public WebElement newFolderText;
+
+    @FindBy(xpath = "//input[@class=\"icon-confirm\"]")
+    public WebElement submitButton;
+
+    @FindBy(xpath = "//span[text()='Java folder']")
+    public WebElement javaFolder;
+
+
+//US05
     @FindBy(xpath = "(//a[@class='action action-menu permanent'])[1]")
     public WebElement actionIconForFolder;
 
@@ -47,7 +64,7 @@ public class FilesPage extends BasePage{
         return Driver.getDriver().findElement(By.xpath("//ul[@class='with-icon']//a[.='"+option+"']"));
     }
 
-
+//US12
     @FindBy(xpath = "//div[@id='app-navigation']//div[@id='app-settings-header']") // //button[@class='settings-button']
     public WebElement settingsButton;
 
@@ -62,4 +79,5 @@ public class FilesPage extends BasePage{
 
     @FindBy(xpath = "//label[@for='showhiddenfilesToggle']")
     public WebElement settingCheckbox3_hiddenFiles;
+
 }
