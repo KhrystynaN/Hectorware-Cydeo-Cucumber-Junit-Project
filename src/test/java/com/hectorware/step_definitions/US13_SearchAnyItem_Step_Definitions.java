@@ -18,11 +18,6 @@ public class US13_SearchAnyItem_Step_Definitions {
 
     FilesPage filesPage = new FilesPage();
 
-    @Given("user is on Files module")
-    public void userIsOnFilesModule() {
-        System.out.println("User successfully logged in and on Files module");
-    }
-
     @When("user click on search icon")
     public void user_click_on_search_icon() {
         System.out.println("User click on search icon");

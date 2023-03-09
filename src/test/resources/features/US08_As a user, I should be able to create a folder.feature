@@ -1,10 +1,10 @@
-@US08_MarkoIvanovic
+@regression
 Feature: As a user, I should be able to add/create a folder.
 
   Background: User is already in the log in page
     Given user is on the home page
 
-
+  @US08_MarkoIvanovic
     Scenario: Verify As a user, I should be able to add/create a folder.
       Given user is on Files module
       When user click on upload bar
