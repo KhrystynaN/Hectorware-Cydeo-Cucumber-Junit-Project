@@ -46,8 +46,6 @@ public class Driver {
                     driverPool.get().manage().deleteAllCookies();
                     break;
 
-
-
                 case "firefox":
                     //WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
