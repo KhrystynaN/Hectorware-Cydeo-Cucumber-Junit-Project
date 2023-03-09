@@ -1,5 +1,6 @@
 package com.hectorware.step_definitions;
 
+import com.github.javafaker.Faker;
 import com.hectorware.pages.FilesPage;
 import com.hectorware.utilities.BrowserUtils;
 import com.hectorware.utilities.Driver;
@@ -25,6 +26,8 @@ public class US05_AddToFavorite_Step_Definition {
 
     @Given("user sees  the last added file or folder {string} without favorite icon")
     public void userSeesTheLastAddedFileOrFolderWithoutFavoriteIcon(String folderName) {
+        Faker faker = new Faker();
+        folderName = faker.name().firstName();
         filesPage.addNewFolderOrFileBtn.click();
         filesPage.addNewFolderBtn.click();
         filesPage.inputBoxForNewFolderName.clear();
@@ -58,7 +61,7 @@ public class US05_AddToFavorite_Step_Definition {
     public void user_choose_add_to_favorites_option() {
         wait.until(ExpectedConditions.visibilityOf(filesPage.addToFavoriteBtn));
         filesPage.addToFavoriteBtn.click();
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(1);
     }
 
     @When("user clicks the {string} sub-module on the left side")
