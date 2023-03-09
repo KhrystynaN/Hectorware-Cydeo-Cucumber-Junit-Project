@@ -23,20 +23,6 @@ public class FilesPage extends BasePage{
     @FindBy(xpath = "//span[text()='Java folder']")
     public WebElement javaFolder;
 
-    // USER STORY 13
-
-    @FindBy(xpath = "//a[@class=\"header-menu__trigger\"]")
-    public WebElement searchButton;
-
-    @FindBy(xpath = "//input[@type=\"search\"]")
-    public WebElement searchTextInput;
-
-    @FindBy(xpath = "//ul[@aria-label=\"Files\"]")
-    public WebElement filesResult;
-
-    @FindBy(xpath = "//ul[@aria-label=\"Apps\"]")
-    public WebElement appsResult;
-
 
 
 
