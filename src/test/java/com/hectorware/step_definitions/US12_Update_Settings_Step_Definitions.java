@@ -22,7 +22,7 @@ public class US12_Update_Settings_Step_Definitions {
     FilesPage filesPage = new FilesPage();
 
 
-    @When("the user clicks the {string} module")
+    @When("user clicks the {string} module")
     public void the_user_clicks_the_module(String string)  {
         filesPage.filesModule.click();
 
@@ -50,21 +50,7 @@ public class US12_Update_Settings_Step_Definitions {
         }
 */
 
-    /*    filesPage.settingCheckbox1_richWorkspaces.click();
-        filesPage.settingCheckbox1_richWorkspaces.isSelected();
-        filesPage.settingCheckbox1_richWorkspaces.click();
-        BrowserUtils.sleep(1);
 
-        filesPage.settingCheckbox2_recommendations.click();
-        Assert.assertTrue(filesPage.settingCheckbox2_recommendations.isSelected());
-        filesPage.settingCheckbox2_recommendations.click();
-        BrowserUtils.sleep(1);
-
-        filesPage.settingCheckbox3_hiddenFiles.click();
-        Assert.assertTrue(filesPage.settingCheckbox3_hiddenFiles.isSelected());
-        filesPage.settingCheckbox3_hiddenFiles.click();
-        BrowserUtils.sleep(1);
-     */
        Assert.assertTrue(filesPage.settingCheckbox1_richWorkspaces.isEnabled());
        Assert.assertTrue(filesPage.settingCheckbox2_recommendations.isEnabled());
        Assert.assertTrue(filesPage.settingCheckbox3_hiddenFiles.isEnabled());
