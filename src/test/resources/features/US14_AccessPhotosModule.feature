@@ -1,3 +1,4 @@
+@regression
 Feature: As a user, I want to access to Photos module.
 
   Background: User is successfully logged in
@@ -12,3 +13,4 @@ Feature: As a user, I want to access to Photos module.
       | Your albums   |
       | Shared albums |
       | Tagged photos |
+
