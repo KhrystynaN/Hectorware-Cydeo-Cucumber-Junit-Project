@@ -1,10 +1,10 @@
-@login
+@regression
 Feature: As a user, I should be able to log in
 
   Background: User is already in the log in page
     Given user is on the login page
 
-
+  @login
   Scenario Outline: Verify login with valid credentials
 
     When user use username "<username>" and passcode "<password>"

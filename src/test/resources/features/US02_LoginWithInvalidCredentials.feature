@@ -1,9 +1,9 @@
-@invalidLogin
+@regression
 Feature: As a user, I should not be able to login with invalid credentials.
 
   Background: User is already in the log in page
     Given user is on the login page
-
+  @invalidLogin
   Scenario Outline: Verify user login fail with invalid credentials
 
     When user enter invalid "<username>" and "<password>"
