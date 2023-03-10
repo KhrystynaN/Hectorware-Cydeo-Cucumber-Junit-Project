@@ -27,4 +27,7 @@ public class ContactsPage extends BasePage {
     }
 
 
+        @FindBy(xpath = "//ul[@id='appmenu']//a[@aria-label='Contacts']//*[name()='svg']//*[name()='image' and contains(@class,'app-icon')]")
+        public WebElement contacts;
+
 }
