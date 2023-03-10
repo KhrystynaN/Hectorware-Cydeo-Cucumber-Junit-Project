@@ -1,10 +1,12 @@
 package com.hectorware.step_definitions;
 
+import com.beust.ah.A;
 import com.hectorware.pages.BasePage;
 import com.hectorware.pages.FilesPage;
 import com.hectorware.utilities.BrowserUtils;
 
 import com.hectorware.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -20,27 +22,35 @@ public class US06_RemoveFiles_Step_Definition extends BasePage {
 
     @When("user click to action-icon")
     public void userClickToActionIcon() {
-        List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//a[@data-action='menu']"));
+        filesPage.actionIcon.click();
+/*
+
+           List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//a[@data-action='menu']"));
 
         for (int i = 0; i < elements.size(); i++) {
             WebElement element = elements.get(i);
             element.click();
         }
 
+ */
+
+BrowserUtils.sleep(2);
 
         }
 
     @When("user should click to {string} option")
     public void userShouldClickToOption(String arg0) {
 
-        //Actions actions = new Actions(Driver.getDriver());
-        //actions.moveToElement(filesPage.AddFavoriteOption).doubleClick();
+      /*
         List<WebElement> elements = Driver.getDriver().findElements(By.xpath("//span[.='Add to favorites']"));
 
         for (int i = 0; i < elements.size(); i++) {
             WebElement element = elements.get(i);
             element.click();
         }
+       */
+        filesPage.AddFavoriteOption.click();
+
         BrowserUtils.sleep(3);
     }
 
@@ -58,29 +68,48 @@ public class US06_RemoveFiles_Step_Definition extends BasePage {
     }
 
     @When("user choose the {string} option")
-    public void user_choose_the_option(String remove) {
+    public void user_choose_the_option(String expectedRemove) {
+       ///Assert.assertEquals(filesPage.removeOption.getText(),expectedRemove);
+        filesPage.removeOption.click();
+        BrowserUtils.sleep(2);
 
-        filesPage.removeOption.isEnabled();
     }
 
     @When("user click the {string} sub-module")
     public void user_click_the_sub_module(String removeOption) {
 
-          filesPage.removeOption.click();
-            BrowserUtils.sleep(3);
+          filesPage.FavoriteTable.click();
 
-        }
+          BrowserUtils.sleep(3);
+
+    }
+
+/*
+
+        //Actions actions = new Actions(Driver.getDriver());
+        // actions.moveToElement(filesPage.nameText).click();
+ */
 
         @Then("Verify that the file is not listed in the Favorites table")
         public void verify_that_the_file_is_not_listed_in_the_favorites_table () {
 
-            filesPage.FavoriteTable.isDisplayed();
+            String fileName="";
+            WebElement favoritesTable = Driver.getDriver().findElement(By.id("sublist-favorites"));
+            List<WebElement> favoriteFiles = favoritesTable.findElements(By.className("innernametext"));
 
+            boolean isFileListed = false;
+            for (WebElement file : favoriteFiles) {
+                if (file.getText().equals("fileName")) {
+                    isFileListed = true;
+                    break;
+                }
+            }
+
+            Assert.assertFalse("File " + fileName + " should not be listed in the favorites table.", isFileListed);
         }
 
+}
 
-
-        }
 
 
 

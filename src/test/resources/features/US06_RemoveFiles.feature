@@ -14,5 +14,6 @@ Feature: Remove files or folders from favorites
     When  user click action-icon from any file on the page to remove
     And   user choose the "Remove from favorites" option
     And   user click the "Favorites" sub-module
+
     Then  Verify that the file is not listed in the Favorites table
 

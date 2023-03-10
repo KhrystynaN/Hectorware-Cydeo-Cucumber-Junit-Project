@@ -17,6 +17,9 @@ public class FilesPage extends BasePage {
     public WebElement FavoriteTable;
     @FindBy(xpath = "//span[.='Add to favorites']")
     public WebElement AddFavoriteOption;
+
+    @FindBy(xpath = "//span[@class='innernametext']")
+    public WebElement nameText;
 }
 
 
