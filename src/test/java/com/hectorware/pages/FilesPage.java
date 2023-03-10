@@ -9,7 +9,7 @@ public class FilesPage extends BasePage {
     @FindBy(xpath = "//a[@href='/index.php/apps/files/']")
     public WebElement inputFiles;
 
-    @FindBy(xpath = "(//a[@data-action='menu'])[1]")
+    @FindBy(xpath = "//a[@data-action='menu']")
     public WebElement actionIcon;
     @FindBy(xpath = "//span[.='Remove from favorites']")
     public WebElement removeOption;
