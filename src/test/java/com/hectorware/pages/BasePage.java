@@ -10,10 +10,14 @@ public class BasePage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+
     public void navigateTo(String module){
         WebElement linkToPage = Driver.getDriver().findElement(By.xpath("(//a[@aria-label='" + module + "'])[1]"));
 
         linkToPage.click();
+
+
+
 
     }
 

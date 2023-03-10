@@ -1,6 +1,5 @@
 package com.hectorware.step_definitions;
 
-import com.hectorware.pages.FilesPage;
 import com.hectorware.pages.LoginPage;
 import com.hectorware.utilities.Driver;
 import io.cucumber.java.en.Given;

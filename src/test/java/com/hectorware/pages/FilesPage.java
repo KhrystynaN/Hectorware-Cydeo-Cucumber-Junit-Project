@@ -1,3 +1,4 @@
+
 package com.hectorware.pages;
 
 
@@ -64,7 +65,6 @@ public class FilesPage extends BasePage{
     public WebElement getActionIcon(int fileOrFolderNumber){
         return Driver.getDriver().findElement(By.xpath("(//tbody[@id='fileList'])[1]//tr["+fileOrFolderNumber+"]//a[@data-action='menu']"));
     }
-
     public WebElement navigateToFilesSubMenu(String option){
         return Driver.getDriver().findElement(By.xpath("//ul[@class='with-icon']//a[.='"+option+"']"));
     }
