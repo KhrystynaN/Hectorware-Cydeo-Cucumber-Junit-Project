@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class FilePage extends BasePage{
 
     public FilePage() {
@@ -24,9 +26,11 @@ public class FilePage extends BasePage{
        @FindBy(xpath = "//a[@class='nav-icon-trashbin svg']")
        public WebElement deleteSubModule;
 
-     @FindBy(xpath = "(//span[@class='innernametext'])[1]")
-     public WebElement firstFileFolder;
+      @FindBy(xpath = "(//span[@class='innernametext'])[1]")
+      public WebElement firstFileFolder;
 
+      @FindBy(xpath = "//tbody[@id='fileList']//td[@class='filename']//span[@class='innernametext']")
+     public List<WebElement> allFilesAndFoldersNames_InDeletedFiles;
 
 }
 

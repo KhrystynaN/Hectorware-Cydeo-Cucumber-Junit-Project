@@ -1,9 +1,9 @@
 @wip
 Feature: As a user, I should be able to delete a file/folder.
 
-  Background: User is successfully logged in
-    Given user is on the home page
-  Scenario: Verify users delete a file/folder
+   Background: User is successfully logged in
+   Given user is on the home page
+   Scenario: Verify users delete a file/folder
 
 
     When the user clicks the "Files" module
