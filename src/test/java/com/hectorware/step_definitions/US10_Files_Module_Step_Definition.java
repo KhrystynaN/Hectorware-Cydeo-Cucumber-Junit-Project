@@ -21,7 +21,6 @@ public class US10_Files_Module_Step_Definition {
      String deleteFileFolder;
 
 
-
     @When("the user clicks the {string} module")
     public void the_user_clicks_the_module(String string) {
      filePage.file_Module.click();
@@ -51,11 +50,11 @@ public class US10_Files_Module_Step_Definition {
    //actions.scrollToElement(deleteFileFolder);
 
         List<String> allFilesAndFoldersInDeleted = new ArrayList<>();
+
         for (WebElement each : filePage.allFilesAndFoldersNames_InDeletedFiles) {
             allFilesAndFoldersInDeleted.add(each.getText());
         }
         Assert.assertTrue(allFilesAndFoldersInDeleted.contains(deleteFileFolder));
     }
-
 
 }

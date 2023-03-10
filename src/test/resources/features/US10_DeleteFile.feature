@@ -1,4 +1,4 @@
-@wip
+@B28G18-79
 Feature: As a user, I should be able to delete a file/folder.
 
    Background: User is successfully logged in

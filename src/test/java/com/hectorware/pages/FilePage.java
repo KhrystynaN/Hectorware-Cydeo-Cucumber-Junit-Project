@@ -16,7 +16,6 @@ public class FilePage extends BasePage{
         @FindBy(xpath = "//a[@aria-label='Files']")
         public WebElement file_Module;
 
-
         @FindBy(xpath = "(//a[@data-action='menu'])[1]")
          public WebElement action_icon;
 
