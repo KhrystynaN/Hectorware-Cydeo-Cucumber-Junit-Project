@@ -35,6 +35,10 @@ public class FilesPage extends BasePage{
     @FindBy(xpath = "//input[@value='New folder']")
     public WebElement inputBoxForNewFolderName;
 
+
+    @FindBy(xpath = "(//a[@class='active'])[1]")
+    public WebElement filesFolder;
+
     public String getFileName(int fileOrFolderNumber){
         return Driver.getDriver().findElement(By.xpath("//tbody[@id='fileList']//tr["+fileOrFolderNumber+"]//span[@class='innernametext']")).getText();
     }
@@ -62,4 +66,19 @@ public class FilesPage extends BasePage{
 
     @FindBy(xpath = "//label[@for='showhiddenfilesToggle']")
     public WebElement settingCheckbox3_hiddenFiles;
+
+    @FindBy(xpath = "//tbody//tr[5]")
+    public WebElement noteFolder;
+
+    @FindBy(xpath = "//span[@class='icon icon-add']")
+    public WebElement plusButton;
+
+    @FindBy(xpath = "//span[.='Upload file']")
+    public WebElement uploadFile;
+
+    @FindBy(xpath = "(//h2[.='No files in here'])[1]")
+    public WebElement textDisplayed;
+
+
+
 }
